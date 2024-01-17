@@ -40,7 +40,7 @@ WHERE PropertyAddress is null
 --BREAKING ADDRESS INTO INDIVIDUAL COLUMNS (ADDRESS,CITY,STATE)
 SELECT PropertyAddress
 FROM NashvilleHousing
---ASK CLIFFORD EXTENSIVELY ABOUT CHARINDEX
+
 SELECT
 SUBSTRING (PropertyAddress,1,CHARINDEX(',',PropertyAddress)-1) as ADDRESS,
 SUBSTRING(PropertyAddress,CHARINDEX(',',PropertyAddress)+1,LEN(PropertyAddress)) as ADDRESS 
